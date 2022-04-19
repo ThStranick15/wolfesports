@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+   <meta name="keywords" content="HTML, CSS">
+   <meta name="description" content="Esports team information and content">
+   <meta name="author" content="Thomas Stranick">
+   <!--<meta http-equiv="refresh" content="30">-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*, html {
+	margin:0;
+	padding:0;
+}
+body {
+margin:0;
+}
+.header {
+	display:flex;
+	background-color:white;
+	color:#000000;
+	padding:20px;
+	font-size:30px;
+	font-family:corbel;
+	/*Underligns text*/
+	text-decoration:underline;
+	/*Text positioning*/
+	vertical-align:middle;
+	line-height:100px;
+	/*Makes text unselectable*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.topMenuBar {
+	margin: 0;
+	padding:0;
+	overflow:hidden;
+	background-color:#333333;
+	border: 4px solid black;
+	/*Changes cursor to hand when hovering*/
+	cursor:pointer;
+	/*Makes text unselectable*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.topMenuBar a{
+	float:left;
+	color:white;
+	text-align:center;
+	padding:16px;
+	text-decoration:none;
+	font-family:corbel;
+	font-weight:bold;
+	
+}
+.topMenuBar a:hover {
+	background-color:#111111;
+}
+.dropbtn:hover {
+	background-color:#111111;
+}
+.dropbtn{
+	background-color: #333333;
+	color:white;
+	text-align:center;
+	padding:16px;
+	text-decoration:none;
+	font-family:corbel;
+	font-weight:bold;
+	padding: 16px;
+    font-size: 16px;
+    border: none;
+	cursor:pointer;
+}
+.dropdown{
+	float:left;
+	overflow:hidden;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float:none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display:block;
+}
+.heading {
+    font-family:corbel;
+    font-weight:bold;
+    text-align:center;
+    font-size:20px;
+    text-decoration:underline;
+    padding:20px;
+}
+.description{
+    font-family:corbel;
+    text-align:center;
+    font-size:20px;
+    padding-bottom:20px;
+}
+hr.divider{
+    border:1px solid black;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:20px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.footer{
+    font-family:corbel;
+    text-align:center;
+	vertical-align:middle;
+}
+.imagecenter{
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    width:100px;
+    height:100px;
+	vertical-align:middle;
+	padding:10px;
+}
+hr.divider{
+    border:1px solid black;
+}
+.footertext{
+	display:inline-block;
+	font-size:15px;
+	font-family:corbel;
+	font-weight:bold;
+	vertical-align:middle;
+}
+</style>
+</head>
+
+<div class="header">
+	<img src="Logos/logoshadow.png" alt="Wolf Esports Logo" style="width:100px;height:100px;float:left;padding-right:10px;justify-content:center;">
+	<h1>Wolf Esports</h1>
+</div>
+
+
+<div class="topMenuBar">
+	<a href='homepage.htm'>Home</a>	
+	<div class="dropdown">
+		<button class="dropbtn">Our Teams</button> <!--onclick="document.getElementById('mainiframe').src='ourteam.htm'"-->
+			<div class="dropdown-content">
+				<a href='valorant.htm'>Valorant</a>
+				<a href='rocketleague.htm'>Rocket League</a>
+				<a href='politicalprocess.htm'>Political Process</a>
+				<a href='league.htm'>League of Legends</a>
+			</div>
+	</div>
+	<a href='aboutus.htm'>About Us</a></li>
+	<a href='contactus.htm'>Contact Us</a></li>
+</div>
+
+<body>
+<div class="heading">
+<h1>We are Wolf Esports.</h1>
+</div>
+
+<div class="description">
+    <p> We aim to push the boundaries on what being an esports organization means. <br> With dedication and perserverance, our teams reach for the top. </p>
+</div>
+
+<hr class="divider">
+
+<!--<div class="imagegallery">
+    <img src="Images/ThomasEsports.jpg" class="imagecycle">
+</div>-->
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="Images/ThomasEsports.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="Images/duck.jpg" style="width:100%">
+      <div class="text">Caption Two</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="Images/farishat.png" style="width:100%">
+      <div class="text">Caption Three</div>
+    </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<hr class="divider">
+
+<div class="footer">
+	<p class="footertext">遠吠えする.</p>
+		<img src="Logos/wolf-logo1.png" class="imagecenter">
+	<p class="footertext">Howl.</p>
+</div>
+
+</body>
+</html>

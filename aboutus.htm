@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<style>
+    *, html {
+	margin:0;
+	padding:0;
+}
+body {
+margin:0;
+}
+.header {
+	display:flex;
+	background-color:white;
+	color:#000000;
+	padding:20px;
+	font-size:30px;
+	font-family:corbel;
+	/*Underligns text*/
+	text-decoration:underline;
+	/*Text positioning*/
+	vertical-align:middle;
+	line-height:100px;
+	/*Makes text unselectable*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.topMenuBar {
+	margin: 0;
+	padding:0;
+	overflow:hidden;
+	background-color:#333333;
+	border: 4px solid black;
+	/*Changes cursor to hand when hovering*/
+	cursor:pointer;
+	/*Makes text unselectable*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.topMenuBar a{
+	float:left;
+	color:white;
+	text-align:center;
+	padding:16px;
+	text-decoration:none;
+	font-family:corbel;
+	font-weight:bold;
+	
+}
+.topMenuBar a:hover {
+	background-color:#111111;
+}
+.dropbtn:hover {
+	background-color:#111111;
+}
+.dropbtn{
+	background-color: #333333;
+	color:white;
+	text-align:center;
+	padding:16px;
+	text-decoration:none;
+	font-family:corbel;
+	font-weight:bold;
+	padding: 16px;
+    font-size: 16px;
+    border: none;
+	cursor:pointer;
+}
+.dropdown{
+	float:left;
+	overflow:hidden;
+}
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float:none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display:block;
+}
+.heading {
+    font-family:corbel;
+    font-weight:bold;
+    text-align:center;
+    font-size:20px;
+    text-decoration:underline;
+    padding:20px;
+}
+.description{
+    font-family:corbel;
+    text-align:center;
+    font-size:20px;
+    padding-bottom:20px;
+}
+.info{
+    display:inline-block;
+	font-family:corbel;
+    font-size:20px;
+    margin:10px;
+	width:50%;
+	height:120px;
+	vertical-align:middle;
+	color:white;
+	background:#333333;
+	border:3px solid black;
+	padding:10px;
+}
+.picture{
+	display:inline-block;
+	width:50%;
+	width:400px;
+	height:400px;
+	vertical-align:middle;
+}
+.about{
+	font-family:corbel;
+    text-align:center;
+	vertical-align:middle;
+}
+.footer{
+    font-family:corbel;
+    text-align:center;
+	vertical-align:middle;
+}
+.imagecenter{
+    display:inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    width:100px;
+    height:100px;
+	vertical-align:middle;
+	padding:10px;
+}
+hr.divider{
+    border:1px solid black;
+}
+.footertext{
+	display:inline-block;
+	font-size:15px;
+	font-family:corbel;
+	font-weight:bold;
+	vertical-align:middle;
+}
+</style>
+</head>
+
+<div class="header">
+	<img src="Logos/logoshadow.png" alt="Wolf Esports Logo" style="width:100px;height:100px;float:left;padding-right:10px;justify-content:center;">
+	<h1>Wolf Esports</h1>
+</div>
+
+
+<div class="topMenuBar">
+	<a href='homepage.htm'>Home</a>	
+	<div class="dropdown">
+		<button class="dropbtn">Our Teams</button> <!--onclick="document.getElementById('mainiframe').src='ourteam.htm'"-->
+			<div class="dropdown-content">
+				<a href='valorant.htm'>Valorant</a>
+				<a href='rocketleague.htm'>Rocket League</a>
+				<a href='politicalprocess.htm'>Political Process</a>
+				<a href='league.htm'>League of Legends</a>
+			</div>
+	</div>
+	<a href='aboutus.htm'>About Us</a></li>
+	<a href='contactus.htm'>Contact Us</a></li>
+</div>
+
+<div class="heading">
+<h1>About Us</h1>
+</div>
+<p class="description">Founded in 2022, Wolf Esports is a New Jersey based team created by a few friends who just want to play games.</p>
+
+<hr class="divider">
+
+<div class="about">
+    <p class="info">Wolf Esports started as a joke among friends. Playing competitive games together online every night they wanted to create an identity to represent on a larger stage. <br> <br> 
+	As a team, our main focus is to provide competitive esports content through tournament play. We look to improve and hone our skills in order to move up and compete on a higher level. </p>
+	<img src="Logos/logoshadow.png" class="picture">
+</div>
+
+
+
+<hr class="divider">
+
+<div class="footer">
+	<p class="footertext">遠吠えする.</p>
+		<img src="Logos/wolf-logo1.png" class="imagecenter">
+	<p class="footertext">Howl.</p>
+</div>
+
+</html>

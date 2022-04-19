@@ -1,0 +1,4 @@
+Light Grey: #e3e3e3
+Dark Grey: #9a9a9a
+Darker Grey: #444444
+Black: #0b0b0b
